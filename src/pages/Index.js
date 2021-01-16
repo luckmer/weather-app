@@ -1,11 +1,10 @@
-import { Input } from "../export";
+import { Input,Weather } from "../export";
+import { useSelector } from "react-redux";
 
-function Index(){
-    return (
-        <div>
-            <Input/>
-        </div>
-    )
+
+const Index = () =>{
+    const state = useSelector(state => state.Data.DisplayData);
+    return state  ?  <Weather/> :  <Input/>
 }
 
 export default Index
