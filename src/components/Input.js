@@ -1,14 +1,17 @@
 import { useState,useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { CollectData,AddData } from "../reducers/DataSlice";
+import { CollectData,AddData,AddForeCast } from "../reducers/DataSlice";
 import { nanoid } from "@reduxjs/toolkit";
-import {Api} from "../api/Api"
-import { Article,Card,Form,Button } from "../styles/Input.Style";
+import {Api,fiveDayForecast} from "../api/Api"
+import { Article, Card, Form, Button } from "../styles/Input.Style";
+
 const Input = () =>{
+    
     const [filter, setFilter] = useState({ filterSubject: "" });
     const dispatch = useDispatch()
     const data = useSelector(state => state.Data)
     let location = data.container.filter
+
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -23,6 +26,8 @@ const Input = () =>{
         if (typeof location === 'undefined') return 
         const data = async () =>{
             const context = await Api(location);
+            const ForeCast = await fiveDayForecast(location);
+            dispatch(AddForeCast(ForeCast))
             dispatch(AddData(context));
         }
         data(); 
@@ -45,7 +50,6 @@ const Input = () =>{
     );
 
 
-
     return (
         <Article>
             <div>
@@ -58,4 +62,3 @@ const Input = () =>{
 }
 
 export default Input
-
