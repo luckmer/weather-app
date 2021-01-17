@@ -30,6 +30,10 @@ export const Form = styled.form`
             border-image: linear-gradient(to right,  #11998e,#38ef7d);
             border-image-slice: 1;
         }
+        @media screen and (max-width: 500px){
+            width:calc(100vw - 40px);
+            margin:auto;
+        }
     }
 
 `
@@ -49,6 +53,7 @@ export const Main = styled.div`
 export const Button = styled.button`
 display: flex;
 justify-content: center;
+padding:30px;
 align-items: center;
 position: relative;
 border:0;
