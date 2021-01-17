@@ -1,9 +1,15 @@
+import {useSelector } from "react-redux";
+const Weather = () =>{
+    const countryData = useSelector(state => state.Data.DisplayData);
+    const ForeCastData = useSelector(state => state.Data.DisplayForeCast);
 
-const Weather =() => {
+    
+
     return (
-        <div>
-            Work
-        </div>
+        <article>
+            
+            
+        </article>
     )
 }
 
