@@ -1,9 +1,10 @@
-import { useState,useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { CollectData,AddData,AddForeCast } from "../reducers/DataSlice";
-import { nanoid } from "@reduxjs/toolkit";
-import {Api,fiveDayForecast} from "../api/Api"
+import { CollectData, AddData, AddForeCast } from "../reducers/DataSlice";
 import { Article, Card, Form, Button } from "../styles/Input.Style";
+import { useDispatch, useSelector } from "react-redux";
+import {Api,fiveDayForecast} from "../api/Api"
+import { useState,useEffect } from "react";
+import { nanoid } from "@reduxjs/toolkit";
+
 
 const Input = () =>{
     
