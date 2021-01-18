@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Open Sans', sans-serif;
     }
     html,body{
-        background-color:#EAEAEA;
+        background-color:#EFF2F9;
         width: 100%;
         height: 100%;
     }
