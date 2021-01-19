@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FilterCurrentDay from "./FilterCurrectDay";
+import FilterCurrentDay from "../hooks/FilterCurrectDay";
 import {TempCalculate,WindSpeed,Visibility,CurrentHour} from "./TempCalculate";
 import Graph from "./Graph";
 import styled from "styled-components";
