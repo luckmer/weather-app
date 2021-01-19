@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 let initialState = {
-    container: "",
+    container:  "",
     DisplayData: "",
     DisplayForeCast: "",
     Filter:""
@@ -26,9 +26,15 @@ const DataSlice = createSlice({
         DataFilter: (state, action) =>{            
             const data = action.payload;
             state.Filter = data
-        }
+        },
+        Test: (state) =>{       
+            state.container = ""
+            state.DisplayData = ""
+            state.DisplayForeCast = ""
+            state.Filter = ""
+        },
     }   
 });
 
-export const { CollectData,AddData,AddForeCast,DataFilter } = DataSlice.actions;
+export const { CollectData,AddData,AddForeCast,DataFilter,Test } = DataSlice.actions;
 export default DataSlice.reducer;
