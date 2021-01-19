@@ -1,5 +1,9 @@
-import { Index } from "./export";
+import { Index,NavBar } from "./export";
 
-const App =  () =>  <Index/>
-
+const App = () => (
+    <>
+        <NavBar/>
+        <Index />
+    </>
+)
 export default App;
