@@ -12,9 +12,9 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
         height: 100%;
     }
-    #root{
-        width:100vw;
-        height: 100vh;
+    canvas{
+        width:100%;
+        height:100%;
     }
 `;
 export default GlobalStyle;

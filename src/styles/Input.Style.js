@@ -2,13 +2,11 @@ import styled from "styled-components";
 
 
 export const Article = styled.article`
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width: 100%;
-    height: 100%;
-    flex-direction:column;
-
+height: 100vh;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
 `
 export const Form = styled.form`
     input{
@@ -60,7 +58,7 @@ border:0;
 margin: auto;
 font-size: 25px;
 cursor: pointer;
-background-color:#EAEAEA;
+background-color:#EFF2F9;
 
 span{
     padding: 0 20px 0 20px;
