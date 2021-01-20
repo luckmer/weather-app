@@ -2,10 +2,8 @@ import { useEffect } from "react";
 const FilterCurrentDay = (data, finder, setFil,dailyHours) =>{
     
     useEffect(() =>{
-
         let filterS = dailyHours.slice();
         let filterData = data.slice();
-
         if (finder.filterSubject) {
             filterS = filterS.filter((item) => item.dayName
                 .toLowerCase()
