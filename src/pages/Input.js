@@ -13,7 +13,6 @@ const Input = () =>{
     const data = useSelector(state => state.Data)
     let location = data.container.filter
 
-
     const handleSubmit = (e) =>{
         e.preventDefault();
         if (typeof filter.filterSubject === "string" && filter.filterSubject.length >= 3) {
@@ -53,11 +52,9 @@ const Input = () =>{
 
     return (
         <Article>
-            <div>
                 <Card>
                     {InputForm}
                 </Card>
-            </div>
         </Article>
     )
 }

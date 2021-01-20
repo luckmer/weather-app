@@ -1,12 +1,10 @@
-
-import { useSelector } from "react-redux";
 import Context from "../components/Context";
+import { useSelector } from "react-redux";
 
 
 
 const Weather = () =>{
     const {DisplayForeCast:{dailyData,dailyHours} } = useSelector(state => state.Data);
-
     let data = dailyData.map((data) => data);
     let daily = dailyHours.map((day) => day)
     let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
@@ -14,7 +12,6 @@ const Weather = () =>{
     let day = today.getDay();
     let displayCurrentDay = daylist[day];
 
-    
     return <Context
         DisplayForeCast={dailyData}
         data={data}
