@@ -1,9 +1,7 @@
 import { Line } from "react-chartjs-2";
 
-
     
 const Graph = ({ HourFilter }) =>{
-    
     let temp = HourFilter.map(({ temp }) =>{
         let data = parseFloat(temp);
         let Celcius = Math.round(data - 273.15)
@@ -11,13 +9,11 @@ const Graph = ({ HourFilter }) =>{
     });
     const day = HourFilter.map(({ dt_txt }) => dt_txt);
     const data = {
-
         labels: [
-            day[0] + " / " + temp[0] + "℃",
-            day[1] + " / " + temp[1] + "℃",
-            day[2] + " / " + temp[2] + "℃",
+            temp[0] + "℃",
+            temp[1] + "℃",
+            temp[2] + "℃",
         ],
-
         datasets: [
             {
                 data: [
@@ -28,25 +24,23 @@ const Graph = ({ HourFilter }) =>{
                 backgroundColor: 'rgb(255, 99, 132)',
                 borderColor: 'rgba(255, 99, 132, 0.2)',
             },
-            ],
-        }
-        const options = {
+        ],
+    }
+    const options = {
         scales: {
-                yAxes: [
-                    {
-                        ticks: {
-                            beginAtZero: true,
-                        },
+            yAxes: [
+                {
+                    ticks: {
+                        beginAtZero: true,
                     },
-                ],
-            },
+                },
+            ],
+        },
         legend: {
-                display: false,
-            },
-        }
+            display: false,
+        },
+    }
+    return <Line data={data} options={options} />
 
-    return <Line data={data} options={options}  />
 }
-
-
 export default Graph
